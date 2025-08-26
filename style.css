@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    font-family: 'Mozilla Headline', sans-serif;
+    color: #fff;
+    line-height: 1.5;
+}
+
+/*  Nav */
+nav {
+  background-color: #1a1a1a;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.logo a {
+  font-size: 24px;
+  text-decoration: none;
+  color: crimson;
+
+}
+ 
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+}
+
+ul li {
+  position: relative;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  display: block;
+  transition: 0.4s;
+}
+
+ul li a:hover {
+  color: red;
+border-radius: 5px;
+   text-decoration: underline;
+   font-size: 18px ;
+background-color: #303030;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    background: #222;
+    padding: 10px 0;
+    border-radius: 6px;
+    min-width: 200px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*  Hero Section  */
+.hero {
+    background: url('./bg/bg2.jpg') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #ff0055;
+}
+
+.hero-text p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.btn {
+    background: #ff0055;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e6004c;
+    box-shadow: 0 0 15px #ff0055;
+}
+
+/*  Categories  */
+.categories {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.categories h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #ff0055;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.category-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.category-card img {
+    width: 80%;
+    border-radius: 8px;
+}
+
+.category-card h3 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+}
+
+/*  Products  */
+.products {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.products h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #ff0055;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.product-card img {
+    width: 70%;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin: 0px 0;
+}
+
+.product-card .price {
+    color: #ff0055;
+    font-weight: bold;
+}
+
+.product-card button {
+    background: #ff0055;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card button:hover {
+    background: #e6004c;
+    box-shadow: 0 0 10px #ff0055;
+    transform: scale(1.05);
+}
+
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+}
+
+
+
+
+/* ===== Testimonials ===== */
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.testimonials h2 {
+    color: #ff0055;
+    margin-bottom: 20px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.testimonial {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+/* ===== Newsletter ===== */
+.newsletter {
+    text-align: center;
+    padding: 50px 20px;
+    background: #111;
+}
+
+.newsletter h2 {
+    color: #ff0055;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 250px;
+}
+
+.newsletter button {
+    background: #ff0055;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: #e6004c;
+}
+
+/* ===== Footer ===== */
+/* Footer Styling */
+
+footer h1{
+   color: #ff0055;
+  text-align: center;
+  margin-top: 0%;
+}
+footer {
+    background: #0f0f0f;
+    color: #ccc;
+    font-family: 'Mozilla Headline', sans-serif;
+    padding-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: #ff0055;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ff0055;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff0055;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #222;
+    font-size: 0.85rem;
+    background: #0a0a0a;
+    color: #888;
+}
